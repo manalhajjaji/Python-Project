@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Tableau de Bord</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Tableau de Bord - {{ role }}</h2>
+        <br><br>
+        {% if role not in ['Services Généraux', 'Services Informatiques', 'Services Administratifs', 'Services Financiers', 'Services de Sécurité', 'Services Juridiques'] %}
+        <a href="{{ url_for('new_request', role=role) }}">New Request</a>
+        {% endif %}
+        <br><br><br>
+        <h3>Demandes en cours :</h3>
+        <table>
+            <tr>
+                <th>Article</th>
+                <th>Quantité</th>
+                <th>Date</th>
+                <th>État</th>
+                {% if role in ['Services Généraux', 'Services Informatiques', 'Services Administratifs', 'Services Financiers', 'Services de Sécurité', 'Services Juridiques'] %}
+                <th>Action</th>
+                {% endif %}
+            </tr>
+            {% for req in requests %}
+            <tr>
+                <td>{{ req.article }}</td>
+                <td>{{ req.quantity }}</td>
+                <td>{{ req.date }}</td>
+                <td>{{ req.status }}</td>
+                {% if role == req.service %}
+                <td>
+                    <form action="{{ url_for('process_request', req_id=req.id, role=role) }}" method="POST">
+                        <button type="submit">Traiter la demande</button>
+                    </form>
+                    
+                </td>
+                {% endif %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

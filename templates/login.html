@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Connexion</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url("/static/dr5.jpg");
+            /* Prevents the image from repeating */
+
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 50px;
+            margin-top: 100px;
+            color: white;
+        }
+
+        h3 {
+            text-align: center;
+            padding-bottom: 10px;
+            margin: 0;
+            color: white;
+        }
+        
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            width: 100%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            background: transparent;
+            backdrop-filter: blur(5px);
+            width: 400px;
+            height: 400px;
+            box-sizing: border-box;
+        }
+
+        table {
+            border-spacing: 10px;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        label{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 19px;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #00562e;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Page de Connexion</h2>
+    <h3>Bienvenue sur la plateforme de la Sous-direction régionnale de Oujda</h3>
+    <div class="form-container">
+        <form method="POST">
+            <table>
+                <tr>
+                    <td><label class="cc" for="username">Nom d'utilisateur :</label></td>
+                    <td><input type="text" id="username" name="username" required></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Mot de passe :</label></td>
+                    <td><input type="password" id="password" name="password" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit">Se connecter</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

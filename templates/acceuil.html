@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sous Direction Régionale de Oujda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url("static/dr5.jpg");
+            /* Prevents the image from repeating */
+
+        }
+
+        header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+        header nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+       
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .hero {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hero-content {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            max-width: 1200px;
+        }
+
+        .working-hours,
+        .login-block {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 1px solid #00562e;
+            border-radius: 10px;
+            padding: 30px;
+            background: transparent;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            width: 45%;
+            color: #fff;
+            background: transparent;
+            backdrop-filter: blur(5px);
+            text-align: center;
+        }
+
+        .working-hours h2,
+        .login-block h2 {
+            margin-bottom: 20px;
+        }
+
+        .working-hours p {
+            text-align: center;
+            padding: 10px;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 10px;
+        }
+
+        .login-block img {
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .login-block .btn {
+            background-color: #00562e;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .login-block .btn:hover {
+            background-color: #003f7f;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #003f7f;
+        }
+
+        p{
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Sous Direction Régionale Oujda</div>
+            <ul>
+                <li><a href="https://www.google.com/maps/place/Sous+Direction+R%C3%A9gionale+pr%C3%A8s+De+La+Cours+D'appel+D'Oujda/@34.6837749,-1.9181596,15z/data=!4m2!3m1!1s0x0:0x1af45d599cb3ae26?sa=X&ved=1t:2428&ictx=111">Localisation</a></li>
+                <li><a href="http://127.0.0.1:5000/login">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Working hours block -->
+            <div class="working-hours">
+                <h2>Heures de travail</h2>
+                <br><br>
+                <p>Lundi : 8h30 - 16h30</p>
+                <p>Mardi : 8h30 - 16h30</p>
+                <p>Mercredi : 8h30 - 16h30</p>
+                <p>Jeudi : 8h30 - 16h30</p>
+                <p>Vendredi : 8h30 - 16h30</p>
+                <p>Samedi : Fermé</p>
+                <p>Dimanche : Fermé</p>
+            </div>
+
+            <!-- Login block -->
+            <div class="login-block">
+                <h2>Accéder aux services</h2>
+                <img src="/static/sdr.png" alt="Sous Direction Régionale de Oujda">
+                <p>Accédez aux services administratifs et suivez vos demandes de manière efficace.</p>
+                <a href="http://127.0.0.1:5000/login" class="btn">Se connecter</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><a href="https://www.google.com/maps/place/Sous+Direction+R%C3%A9gionale+pr%C3%A8s+De+La+Cours+D'appel+D'Oujda/@34.6837749,-1.9181596,15z/data=!4m2!3m1!1s0x0:0x1af45d599cb3ae26?sa=X&ved=1t:2428&ictx=111">Localisation</a></p>
+    </footer>
+</body>
+</html>

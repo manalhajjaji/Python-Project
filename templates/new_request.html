@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Request - {{ role }}</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin-top: 100px;
+            margin-left: 300px;
+            padding: 20px;
+            background-color: white;
+            background: transparent;
+            backdrop-filter: blur(5px);
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+            color: #00562e;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #00562e;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+        }
+        body{
+            background-image: url("/static/dr5.jpg");
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nouvelle Demande - {{ role }}</h1>
+        <form method="POST">
+            <label for="article">Article:</label>
+            <input type="text" id="article" name="article" required>
+
+            <label for="quantity">Quantité:</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="status">Statut:</label>
+            <select id="status" name="status">
+                <option value="En cours">En cours</option>
+            </select>
+
+            <label for="service">Service Concerné:</label>
+            <select id="service" name="service">
+                <option value="Services Généraux">Services Généraux</option>
+                <option value="Services Informatiques">Services Informatiques</option>
+                <option value="Services Administratifs">Services Administratifs</option>
+                <option value="Services Financiers">Services Financiers</option>
+                <option value="Services de Sécurité">Services de Sécurité</option>
+                <option value="Services Juridiques">Services Juridiques</option>
+            </select>
+            
+            <br>
+
+            <button type="submit">Submit Request</button>
+        </form>
+    </div>
+</body>
+</html>

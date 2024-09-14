@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <style>
+        h1{
+            text-align: center;
+            color: white;
+        }
+
+        body{
+            background-image: url("/static/dr5.jpg");
+
+        }
+
+        .container {
+            max-width: 800px;
+            margin-top: 200px;
+            margin-left: 300px;
+            padding: 20px;
+            background-color: white;
+            background: transparent;
+            backdrop-filter: blur(5px);
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        table {
+    width: 100%; /* This makes the table take the full width of the container */
+    margin: 0 auto; /* This centers the table horizontally */
+    border-collapse: collapse; /* This ensures that the table borders are collapsed */
+}
+
+th{
+    color: #00562e;
+    padding: 10px;
+    text-align: center; /* This centers the text within each cell */
+    border: 1px solid white;
+}
+
+td{
+    color: white;
+    padding: 10px;
+    text-align: center; /* This centers the text within each cell */
+    border: 1px solid white;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Admin Dashboard</h1>
+    <table>
+        <tr>
+            <th>Article</th>
+            <th>Quantité</th>
+            <th>Date</th>
+            <th>Statut</th>
+            <th>Role</th>
+            <th>Service Concerné</th>
+        </tr>
+        {% for req in requests %}
+        <tr>
+            <td>{{ req.article }}</td>
+            <td>{{ req.quantity }}</td>
+            <td>{{ req.date }}</td>
+            <td>{{ req.status }}</td>
+            <td>{{ req.role }}</td>
+            <td>{{ req.service }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>
